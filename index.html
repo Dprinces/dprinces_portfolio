@@ -15,15 +15,15 @@
         <div class="container">
             <nav>
                 <img src="images/logo1.jpg" class="logo">
-                <ul>
-                    <li><a href="#">Home</a> </li>
-                    <li><a href="#">About</a> </li>
-                    <li><a href="#">Services</a> </li>
-                    <li><a href="#">portfolio</a> </li>
-                    <li><a href="#">Contact</a> </li>
-                    <i class="fa-regular fa-circle-xmark"></i>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a> </li>
+                    <li><a href="#about">About</a> </li>
+                    <li><a href="#services">Services</a> </li>
+                    <li><a href="#portfolio">portfolio</a> </li>
+                    <li><a href="#contact">Contact</a> </li>
+                    <i class="fa-duotone fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-duotone fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Frontend Developer</p>
@@ -32,7 +32,7 @@
         </div>
     </div>
     <!-- ......................about........... -->
-    <div class="about">
+    <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
@@ -148,7 +148,7 @@
         </div>
     </div>
     <!-- ...............................Contact.................... -->
-    <div id="contect">
+    <div id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
@@ -174,7 +174,7 @@
             </div>
         </div>
         <div class="copyright">
-            <p>Copyright <i class="fa-regular fa-copyright"></i> Anthony. <i class="fa-regular fa-heart"></i></p>
+            <p><i class="fa-regular fa-copyright"></i> DprinceDeveloper <i class="fa-regular fa-heart"></i></p>
         </div>
     </div>
 
@@ -193,6 +193,17 @@
 
         }
     </script>
+
+     <script>
+        var sidemenu= document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right= "0";
+        }
+        function closemenu(){
+            sidemenu.style.right= "-200px";
+        }
+     </script>
+
 </body>
 
 </html>
