@@ -1,209 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
     <title>Personal Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/bab3187806.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/bab3187806.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/logo1.jpg" class="logo">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a> </li>
-                    <li><a href="#about">About</a> </li>
-                    <li><a href="#services">Services</a> </li>
-                    <li><a href="#portfolio">portfolio</a> </li>
-                    <li><a href="#contact">Contact</a> </li>
-                    <i class="fa-duotone fa-circle-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-duotone fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p>Frontend Developer</p>
-                <h1>Hi, I'm <span>Olasunkanmi </span> <br>Anthony Ogunleye from Nigeria</h1>
-            </div>
+      <div class="container">
+        <nav>
+          <img src="images/logo1.jpg" class="logo" />
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-duotone fa-circle-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-duotone fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Full Stack Developer</p>
+          <h1>
+            Hi, I'm <span>Olasunkanmi </span> <br />Anthony Ogunleye from
+            Nigeria
+          </h1>
         </div>
+      </div>
     </div>
     <!-- ......................about........... -->
     <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/2.jpg">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>Hello there! 👋 I'm a passionate frontend developer with a love for crafting clean
-                        and efficient user interfaces. I thrive on turning complex design concepts into seamless,
-                        interactive experiences. My journey in the world of web development began with a fascination for
-                        creating visually appealing and user-friendly websites.</p>
-                    <div class="tab-title">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience </p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Frontend Developer</span><br>Developing Web/App interfaces</li>
-                            <li><span>Web Developer</span><br>Web app Development</li>
-                            <li><span>Mobile App Developer</span><br>Building Android apps</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>2019 - Current</span><br>Olasca Ventures</li>
-                            <li><span>2017 - 2019 </span><br>Web app Development</li>
-                            <li><span>2017-2019</span><br>Building Android apps</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2023</span><br>Ekiti State Digital Skill Academy </li>
-                            <li><span>2022</span><br>Web app Development</li>
-                            <li><span>2021</span><br>Building Android apps</li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/2.jpg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              A graduate in-view studying Education in Computer Science, I bring
+              a dynamic blend of research acumen and analytical prowess to the
+              realm of website development. With a keen eye for detail and a
+              knack for problem-solving, I thrive in fast-paced environments. My
+              passion for learning drives me to continually adapt to emerging
+              technologies, making me an asset to any team. I am eager to
+              channel my skills and enthusiasm into crafting innovative web
+              solutions, contributing to impactful projects, and driving forward
+              in the ever-evolving landscape of web development.
+            </p>
+            <div class="tab-title">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
             </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Frontend Development</span><br />HTML, CSS, JavaScript,
+                  React.js, Tailwind CSS
+                </li>
+                <li>
+                  <span>Backend Development</span><br />Node.js, MongoDB,
+                  Cross-Browser Compatibility
+                </li>
+                <li>
+                  <span>Version Control</span><br />Git and GitHub proficiency
+                </li>
+                <li>
+                  <span>Personal Strengths</span><br />Excellent communication,
+                  leadership, project management
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2024</span><br />Academic Tutor - Ajangbadi High School,
+                  Lagos
+                </li>
+                <li>
+                  <span>2023</span><br />Academic Tutor - Ola-Oluwa Muslim
+                  College, Ekiti
+                </li>
+                <li>
+                  <span>Feb 2023 - Aug 2023</span><br />Team Lead - Ekiti State
+                  Digital Skilling Academy
+                </li>
+                <li>
+                  <span>Feb 2024 - Mar 2024</span><br />Certificate of
+                  Internship - Zidio Development
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2025</span><br />B.Sc(Ed.) Computer Science - Ekiti
+                  State University, Ado-Ekiti
+                </li>
+                <li>
+                  <span>2024</span><br />Ekiti State Digital Skilling Academy
+                  (Tech4dev & Meta)
+                </li>
+                <li>
+                  <span>2017</span><br />Senior Secondary Certificate - Glorious
+                  Leadsway College, Lagos
+                </li>
+                <li>
+                  <span>2011</span><br />Primary School Certificate - Liveth
+                  Nursery and Primary School, Lagos
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- ...............................services.................... -->
     <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Developer</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, soluta reprehenderit. Nihil
-                        soluta illo praesentium nam non harum illum dolorum!</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div>
-                    <i class="fa-brands fa-app-store-ios"></i>
-                    <h2>App Developer</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, soluta reprehenderit. Nihil
-                        soluta illo praesentium nam non harum illum dolorum!</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-crop-simple"></i>
-                    <h2>Web Developer</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, soluta reprehenderit. Nihil
-                        soluta illo praesentium nam non harum illum dolorum!</p>
-                    <a href="#">Learn More</a>
-                </div>
-            </div>
-
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Frontend Development</h2>
+            <p>
+              Creating responsive and interactive user interfaces using modern
+              technologies like React, Vue.js, HTML5, CSS3, and JavaScript.
+              Focused on delivering exceptional user experiences with clean,
+              maintainable code.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-server"></i>
+            <h2>Backend Development</h2>
+            <p>
+              Building robust server-side applications and APIs using Node.js,
+              Express, MongoDB, and other backend technologies. Specializing in
+              scalable architecture, database design, and secure authentication
+              systems.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-globe"></i>
+            <h2>Full Stack Solutions</h2>
+            <p>
+              End-to-end web application development combining frontend and
+              backend expertise. From concept to deployment, delivering complete
+              digital solutions that meet business requirements and user needs.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
         </div>
+      </div>
     </div>
     <!-- --------------------portfolio--------------------- -->
     <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="images/work-1.png">
-                    <div class="layer">
-                        <h3>
-                            Social Media App
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, at? Quae, quos dicta.
-                            Corrupti, inventore!</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-
-                </div>
-                <div class="work">
-                    <img src="images/work-2.png">
-                    <div class="layer">
-                        <h3>
-                            Music App
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, at? Quae, quos dicta.
-                            Corrupti, inventore!</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/work-3.png">
-                    <div class="layer">
-                        <h3>
-                            Online shopping App
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, at? Quae, quos dicta.
-                            Corrupti, inventore!</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/work-1.png" />
+            <div class="layer">
+              <h3>TechHub EKSU Website</h3>
+              <p>
+                A comprehensive website for TechHub EKSU built with HTML, CSS,
+                and JavaScript. Features modern design and responsive layout for
+                educational technology hub.
+              </p>
+              <a
+                href="https://github.com/Dprinces/TechHub-EKSU-Website"
+                target="_blank"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
             </div>
-            <a href="#" class="btn">See more</a>
+          </div>
+          <div class="work">
+            <img src="images/work-2.png" />
+            <div class="layer">
+              <h3>Dynamic Blog Website</h3>
+              <p>
+                A dynamic blog website created during Bharat Internship using
+                Node.js and MongoDB. Features user authentication, post
+                management, and responsive design.
+              </p>
+              <a href="https://github.com/Dprinces/blog-website" target="_blank"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-3.png" />
+            <div class="layer">
+              <h3>Personal Portfolio</h3>
+              <p>
+                A modern and responsive personal portfolio website showcasing my
+                skills, projects, and experience as a frontend developer with
+                clean design.
+              </p>
+              <a
+                href="https://github.com/Dprinces/dprinces_portfolio"
+                target="_blank"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
         </div>
+        <a href="#" class="btn">See more</a>
+      </div>
     </div>
     <!-- ...............................Contact.................... -->
     <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fas fa-paper-plane"></i>contact@example.com</p>
-                    <p><i class="fas fa-phone-square-alt"></i>+234 8168 010 822</p>
-                    <div class="social-icons">
-                        <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                    <a href="images/ANTHONYS_RESUME.pdf" download class="btn btn2">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form>
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email Address" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">submit</button>
-                    </form>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <div class="contact-info">
+              <p><strong>Email:</strong> dprincedeveloper@gmail.com</p>
+              <p><strong>Phone:</strong> +2348168010822</p>
             </div>
+            <div class="social-icons">
+              <a href="https://facebook.com"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a
+                href="https://www.linkedin.com/in/olasunkanmi-ogunleye-a1a1a8240/"
+                target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/Dprinces" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+            <a
+              href="images/CURRICULUM VITAE_ANTHONY OLASUNKANMI OGUNLEYE (4).pdf"
+              download
+              class="btn btn2"
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <form id="contact-form">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="message"
+                id="message"
+                rows="6"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+              <button
+                type="button"
+                id="mailto-btn"
+                class="btn btn2"
+                style="margin-left: 10px; background-color: #ff004f"
+              >
+                Send via Email
+              </button>
+            </form>
+            <div id="form-status" style="margin-top: 10px; display: none"></div>
+            <div
+              style="
+                margin-top: 15px;
+                padding: 15px;
+                background: linear-gradient(135deg, #262626, #1a1a1a);
+                border-radius: 8px;
+                font-size: 14px;
+                color: #fff;
+                border-left: 4px solid #ff004f;
+              "
+            >
+              <strong style="color: #ff004f">💡 Alternative:</strong> You can
+              also email me directly at
+              <a
+                href="mailto:Dprincedeveloper@gmail.com"
+                style="color: #00ff00; text-decoration: none; font-weight: bold"
+                >Dprincedeveloper@gmail.com</a
+              >
+            </div>
+          </div>
         </div>
-        <div class="copyright">
-            <p><i class="fa-regular fa-copyright"></i> DprinceDeveloper <i class="fa-regular fa-heart"></i></p>
-        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          <i class="fa-regular fa-copyright"></i> DprinceDeveloper
+          <i class="fa-regular fa-heart"></i>
+        </p>
+      </div>
     </div>
 
     <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab")
-
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
         }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
     </script>
 
-     <script>
-        var sidemenu= document.getElementById("sidemenu");
-        function openmenu(){
-            sidemenu.style.right= "0";
-        }
-        function closemenu(){
-            sidemenu.style.right= "-200px";
-        }
-     </script>
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
 
-</body>
+    <script>
+      // Handle contact form submission
+      const form = document.getElementById("contact-form");
+      const formStatus = document.getElementById("form-status");
+      const mailtoBtn = document.getElementById("mailto-btn");
 
+      // Try to submit via EmailJS or fallback to mailto
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        // Try to use a simple form submission service
+        const formData = new FormData();
+        formData.append("name", name);
+        formData.append("email", email);
+        formData.append("message", message);
+        formData.append("_to", "Dprincedeveloper@gmail.com");
+        formData.append(
+          "_subject",
+          "New Contact Form Submission from Portfolio"
+        );
+
+        fetch("https://formsubmit.co/Dprincedeveloper@gmail.com", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => {
+            if (response.ok) {
+              formStatus.style.display = "block";
+              formStatus.style.color = "#00ff00";
+              formStatus.innerHTML =
+                "Thank you! Your message has been sent successfully.";
+              form.reset();
+            } else {
+              throw new Error("Form submission failed");
+            }
+          })
+          .catch((error) => {
+            // Fallback to mailto
+            openMailto(name, email, message);
+            formStatus.style.display = "block";
+            formStatus.style.color = "#ffa500";
+            formStatus.innerHTML =
+              "Opening your email client to send the message...";
+          });
+      });
+
+      // Mailto button functionality
+      mailtoBtn.addEventListener("click", function () {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        if (!name || !email || !message) {
+          formStatus.style.display = "block";
+          formStatus.style.color = "#ff0000";
+          formStatus.innerHTML = "Please fill in all fields before sending.";
+          return;
+        }
+
+        openMailto(name, email, message);
+      });
+
+      function openMailto(name, email, message) {
+        const subject = encodeURIComponent("Portfolio Contact from " + name);
+        const body = encodeURIComponent(
+          "Name: " +
+            name +
+            "\n" +
+            "Email: " +
+            email +
+            "\n" +
+            "Message: " +
+            message
+        );
+
+        const mailtoLink =
+          "mailto:Dprincedeveloper@gmail.com?subject=" +
+          subject +
+          "&body=" +
+          body;
+        window.location.href = mailtoLink;
+      }
+    </script>
+  </body>
 </html>
