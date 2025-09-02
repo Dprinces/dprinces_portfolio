@@ -337,9 +337,11 @@
       var sidemenu = document.getElementById("sidemenu");
       function openmenu() {
         sidemenu.style.right = "0";
+        sidemenu.classList.add("show");
       }
       function closemenu() {
-        sidemenu.style.right = "-200px";
+        sidemenu.style.right = "-280px";
+        sidemenu.classList.remove("show");
       }
     </script>
 

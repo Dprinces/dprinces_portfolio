@@ -933,11 +933,6 @@ nav .fa-duotone {
     margin-bottom: 20px;
   }
 
-  /* Hide desktop navigation menu */
-  nav ul {
-    display: none;
-  }
-
   /* Show hamburger menu */
   nav .fa-duotone {
     display: block !important;
@@ -958,7 +953,6 @@ nav .fa-duotone {
 
   /* Mobile navigation menu styling */
   nav ul {
-    display: block;
     background: linear-gradient(135deg, #ff004f, #ff6b6b);
     position: fixed;
     top: 0;
@@ -969,6 +963,13 @@ nav .fa-duotone {
     z-index: 1000;
     transition: right 0.3s ease;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Show mobile menu when active */
+  nav ul.show {
+    right: 0;
   }
 
   nav ul li {
