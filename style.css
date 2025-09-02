@@ -933,16 +933,32 @@ nav .fa-duotone {
     margin-bottom: 20px;
   }
 
-  /* Navigation improvements */
+  /* Hide desktop navigation menu */
+  nav ul {
+    display: none;
+  }
+
+  /* Show hamburger menu */
   nav .fa-duotone {
-    display: block;
+    display: block !important;
     font-size: 28px;
     color: #fff;
     cursor: pointer;
     z-index: 1001;
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
   }
 
+  nav .fa-duotone:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+  }
+
+  /* Mobile navigation menu styling */
   nav ul {
+    display: block;
     background: linear-gradient(135deg, #ff004f, #ff6b6b);
     position: fixed;
     top: 0;
@@ -957,24 +973,28 @@ nav .fa-duotone {
 
   nav ul li {
     display: block;
-    margin: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 5px 15px;
+    border-bottom: none;
+    border-radius: 8px;
+    overflow: hidden;
   }
 
   nav ul li a {
     display: block;
-    padding: 20px 30px;
+    padding: 18px 25px;
     font-size: 18px;
     color: #fff;
     text-decoration: none;
     transition: all 0.3s ease;
     min-height: 48px;
     line-height: 1.2;
+    border-radius: 8px;
   }
 
   nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.1);
-    padding-left: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    padding-left: 35px;
+    transform: translateX(5px);
   }
 
   nav ul .fa-duotone {
@@ -1480,6 +1500,24 @@ img {
 
   .about-col-2 {
     font-size: 14px;
+  }
+
+  /* Ensure hamburger menu is visible on very small screens */
+  nav .fa-duotone {
+    display: block !important;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+    padding: 8px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+
+  nav .fa-duotone:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
   }
 
   nav ul {
