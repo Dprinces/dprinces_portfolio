@@ -125,6 +125,8 @@ nav {
   border-radius: var(--border-radius-lg);
   margin: 20px 0;
   box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 1002;
 }
 
 .logo {
@@ -913,12 +915,26 @@ nav .fa-duotone {
     padding: 0 15px;
   }
 
+  /* Ensure proper spacing for mobile layout */
+  #header {
+    min-height: 100vh;
+    padding-top: 20px;
+  }
+
+  /* Navigation spacing on mobile */
+  nav {
+    margin: 10px 0;
+    padding: 15px 0;
+  }
+
   /* Header improvements */
   .header-text {
-    margin-top: 50%;
+    margin-top: 120px;
     font-size: 18px;
     text-align: center;
     padding: 0 20px;
+    position: relative;
+    z-index: 1;
   }
 
   .header-text h1 {
