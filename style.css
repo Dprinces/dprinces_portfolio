@@ -941,19 +941,22 @@ nav .fa-duotone {
     cursor: pointer;
     z-index: 1001;
     position: relative;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 12px;
+    border-radius: 8px;
     transition: all 0.3s ease;
+    background: rgba(99, 102, 241, 0.2);
+    border: 1px solid rgba(99, 102, 241, 0.3);
   }
 
   nav .fa-duotone:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: scale(1.1);
+    background: rgba(99, 102, 241, 0.4);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
   }
 
   /* Mobile navigation menu styling */
   nav ul {
-    background: linear-gradient(135deg, #ff004f, #ff6b6b);
+    background: linear-gradient(135deg, #1e1b4b, #3730a3, #4338ca);
     position: fixed;
     top: 0;
     right: -280px;
@@ -962,9 +965,9 @@ nav .fa-duotone {
     padding-top: 80px;
     z-index: 1000;
     transition: right 0.3s ease;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
   }
 
   /* Show mobile menu when active */
@@ -1004,6 +1007,18 @@ nav .fa-duotone {
     left: 25px;
     cursor: pointer;
     font-size: 25px;
+    color: #fff;
+    padding: 8px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  nav ul .fa-duotone:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
 
   /* About section mobile */
