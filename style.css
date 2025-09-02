@@ -618,6 +618,7 @@ nav ul li a:hover {
   padding: 100px 0;
   background: var(--secondary-bg);
   position: relative;
+  text-align: center;
 }
 
 #portfolio::before {
