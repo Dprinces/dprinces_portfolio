@@ -1,0 +1,10 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.env*.local
+.vercel
+
+# Personal documents (cover letters, LinkedIn export, tailored CVs) — never deploy
+private/
