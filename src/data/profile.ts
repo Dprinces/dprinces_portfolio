@@ -11,7 +11,7 @@ export const profile = {
   email: "anthonyolasunkanmi32@gmail.com",
   phone: "+234 816 801 0822",
   phoneHref: "+2348168010822",
-  site: "https://dprinces-portfolio.vercel.app",
+  site: "https://olasunkanmiogunleye.cv",
   cv: "/Anthony-Ogunleye-CV.pdf",
   currently: { role: "Application Developer", org: "Sage Grey Technologies" },
   socials: {
@@ -22,7 +22,7 @@ export const profile = {
     "I ship web, mobile and backend systems that real businesses run on — WhatsApp commerce, payments, POS, attendance and offline AI — from the data model to deployment.",
   about: [
     "I'm Anthony — known online as DprinceDeveloper. I trained as a Computer Science educator at Ekiti State University, and that shapes how I build: I start with the person using the thing, then work backwards to the code.",
-    "Over four years I've built production systems for startups, enterprises and 25 freelance clients: a WhatsApp ordering bot handling 5,000+ orders a month, a staff storefront for Flour Mills of Nigeria wired to Moniepoint and POS terminals, and a marketplace app at Sage Grey Technologies whose users grew 300%. I work in TypeScript, React, React Native, Node.js, NestJS and Python, and I'm increasingly focused on applied AI.",
+    "Over three years I've built production systems for startups, enterprises and 25 freelance clients: a WhatsApp ordering bot handling 5,000+ orders a month, a staff storefront used by 650 Flour Mills of Nigeria employees processing ~₦3.56M a month, and a marketplace app at Sage Grey Technologies whose users grew 350%. I work in TypeScript, React, React Native, Node.js, NestJS and Python, and I'm increasingly focused on applied AI.",
     "Beyond code, I lead. I served as President of the Sandwich Students Association at EKSU, led cohorts at the Ekiti State Digital Skilling Academy, and still mentor developers starting out — because the best software, like the best teaching, makes hard things feel simple.",
   ],
 } as const;
@@ -31,7 +31,7 @@ export const stats = [
   { value: 5000, suffix: "+", label: "WhatsApp orders automated / month" },
   { value: 60000, suffix: "+", label: "Customers reached" },
   { value: 25, suffix: "", label: "Freelance clients shipped for" },
-  { value: 300, suffix: "%", label: "User growth on SplitMulti" },
+  { value: 350, suffix: "%", label: "User growth on SplitMulti" },
 ] as const;
 
 export const stack = [
@@ -70,6 +70,8 @@ export type Project = {
   live?: string;
   repo?: string;
   featured?: boolean;
+  /** Set for portrait app screenshots so they render whole instead of in a browser frame. */
+  device?: "phone";
 };
 
 export const projects: Project[] = [
@@ -79,49 +81,47 @@ export const projects: Project[] = [
     kicker: "Enterprise · Payments",
     year: "2026",
     summary:
-      "A staff storefront and admin dashboard for Flour Mills of Nigeria, selling FMN products to employees at discounted rates. Online payments through Moniepoint, plus a “Pay with POS” option that sends the charge straight to a Moniebook POS terminal.",
+      "A staff storefront and admin dashboard for Flour Mills of Nigeria, selling FMN products to employees at discounted rates — used by 650 staff, ~25 orders a day and ~₦3.56M a month. Online payments through Moniepoint, plus a “Pay with POS” option that sends the charge straight to a Moniebook POS terminal.",
     tags: ["PostgreSQL", "Moniepoint", "Moniebook POS", "OTP auth"],
     image: "/images/projects/fmn-tuckshop.png",
     live: "https://fmn-tuckshop-portal.loadbundle.com.ng",
     featured: true,
   },
+  {
+    slug: "splitmulti",
+    title: "SplitMulti Mobile App",
+    kicker: "Mobile · Sage Grey Technologies",
+    year: "2026",
+    summary:
+      "The cross-platform mobile app for SplitMulti, a multi-vendor marketplace where shoppers can join “split” group purchases. Serves 25 vendors and 850+ products across both sides of the market, and helped grow users from 20 to 90 — a 350% increase.",
+    tags: ["React Native", "Expo", "TypeScript", "Marketplace"],
+    image: "/images/projects/splitmulti.png",
+    live: "https://www.splitmulti.com",
+    featured: true,
+  },
+  {
+    slug: "salonconnect",
+    title: "SalonConnect",
+    kicker: "Open source · Frontend",
+    year: "2026",
+    summary:
+      "Frontend for a salon services platform: browse salons, book appointments and pay. I built the booking flow and payment-card screens and wired every screen into the router, shipping through reviewed pull requests to the team's repository.",
+    tags: ["React", "TypeScript", "Redux Toolkit", "Formik", "Material UI", "Tailwind CSS"],
+    image: "/images/projects/salonconnect.png",
+    live: "https://sal-con-frontend.vercel.app",
+    repo: "https://github.com/Dprinces/SalConFrontend",
+    featured: true,
+  },
    {
-    slug: "award-portal",
-    title: "Sandwich Award Platform",
-    kicker: "Voting · 600 paid votes",
-    year: "2026",
+    slug: "testrack",
+    title: "Testrack",
+    kicker: "Open source · Web3",
+    year: "2025",
     summary:
-      "EKSU's student awards, online: 708 registered students, 45 nominees and 600 paid votes processed through Paystack, secured with JWT, rate limiting and audit logs.",
-    tags: ["React", "Node.js", "Express", "MongoDB", "Paystack"],
-    image: "/images/projects/award-portal.png",
-    live: "https://award-portal.vercel.app",
-    repo: "https://github.com/Dprinces/Award-Portal",
-    featured: true,
-  },
-  {
-    slug: "scripturesense",
-    title: "ScriptureSense",
-    kicker: "Offline AI · Desktop",
-    year: "2026",
-    summary:
-      "An AI sermon assistant: transcribes the preacher live with an offline speech-recognition model, detects Bible references like “John 3:16”, and puts them on screen in EasyWorship, ProPresenter or PowerPoint. Runs fully offline, for venues without reliable internet.",
-    tags: ["Python", "Vosk", "NLP", "Automation"],
-    image: "/images/projects/scripturesense.png",
-    live: "https://scripturesense.vercel.app",
-    repo: "https://github.com/Dprinces/scripturesense",
-    featured: true,
-  },
-  {
-    slug: "smartchurch-cams",
-    title: "SmartChurch CAMS",
-    kicker: "SaaS · 420 members",
-    year: "2026",
-    summary:
-      "QR-code attendance for churches, now serving 420 registered members. Check-in takes under five seconds, the Sunday report is ready the same afternoon, and absentees are flagged for pastoral follow-up. Typed Express API with JWT auth and Zod validation.",
-    tags: ["Next.js", "TypeScript", "Express", "PostgreSQL", "Prisma"],
-    image: "/images/projects/smartchurch.png",
-    live: "https://smartchurch-cams-six.vercel.app",
-    repo: "https://github.com/Dprinces/smartchurch-cams",
+      "A professional workspace for Web3 testers and builders: track the testnets and projects you join, deadlines and faucets across multiple blockchains, with a statistics dashboard for completed, pending and missed projects — no more relying on memory or scattered notes.",
+    tags: ["React", "Vite", "Tailwind CSS", "JavaScript"],
+    image: "/images/projects/testrack.png",
+    repo: "https://github.com/Dprinces/Testrack",
     featured: true,
   },
   {
@@ -132,26 +132,8 @@ export const projects: Project[] = [
     summary:
       "A WhatsApp chatbot for FMCG retail ordering: 5,000+ orders a month across 60,000+ customers, about 600 hours of manual processing saved. Twilio messaging and OTP, Chowdeck delivery dispatch, and inventory synced to Moniepoint POS terminals.",
     tags: ["Node.js", "Express", "MongoDB", "Twilio", "Docker"],
-  },
-  {
-    slug: "eacc",
-    title: "Ekiti AirLift & Cargo Connect",
-    kicker: "Logistics · API + Mobile",
-    year: "2026",
-    summary:
-      "Backend for a logistics and airport-pickup platform around Ekiti Cargo Airport, connecting passengers, farmers, traders and drivers. JWT auth, passenger and cargo bookings, and pricing by distance, weight and airport fees.",
-    tags: ["Python", "FastAPI", "SQLAlchemy", "PostgreSQL"],
-    repo: "https://github.com/Dprinces/eacc_backend",
-  },
-  {
-    slug: "virtual-assistant",
-    title: "Dashboard Virtual Assistant",
-    kicker: "AI · Full-stack",
-    year: "2025",
-    summary:
-      "An OpenAI-powered chat assistant inside a dashboard, with JWT auth and refresh tokens. React + Vite on the front, Express and MongoDB behind it.",
-    tags: ["React", "Express", "MongoDB", "OpenAI API"],
-    repo: "https://github.com/Dprinces/Web-Dashboard-Virtual-Assistant",
+    image: "/images/projects/project-legacy.png",
+    device: "phone",
   },
   {
     slug: "goodnesseer",
@@ -173,6 +155,7 @@ export const projects: Project[] = [
     summary:
       "Backend for a creative agency's brand site: a merch store with products, cart, checkout and orders, plus an admin dashboard to manage portfolio projects, services, job applicants and contact enquiries.",
     tags: ["Node.js", "Express", "REST API", "Admin auth"],
+    image: "/images/projects/shortboy.png",
     live: "https://shortboy-f6jk.vercel.app",
   },
   {
@@ -183,6 +166,8 @@ export const projects: Project[] = [
     summary:
       "Browse service providers and book appointments. Modular architecture with Zustand state, validated forms and local persistence.",
     tags: ["React Native", "Expo", "TypeScript", "Zustand", "Zod"],
+    image: "/images/projects/service-booking.png",
+    device: "phone",
     repo: "https://github.com/Dprinces/Service_Booking_App",
   },
   {
@@ -200,12 +185,12 @@ export const projects: Project[] = [
 ];
 
 export const archive = [
+  { title: "Sandwich Award Platform", year: "2026", tech: "React, Node.js, MongoDB, Paystack", href: "https://award-portal.vercel.app" },
+  { title: "ScriptureSense", year: "2026", tech: "Python, Vosk, NLP", href: "https://scripturesense.vercel.app" },
+  { title: "SmartChurch CAMS", year: "2026", tech: "Next.js, TypeScript, PostgreSQL", href: "https://smartchurch-cams-six.vercel.app" },
   { title: "E-Assessment System (final-year project)", year: "2025", tech: "React, Node.js", href: "https://e-assessment-system-for-practical-p.vercel.app" },
-  { title: "Testrack · open-source contribution", year: "2025", tech: "Web3, TypeScript", href: "https://github.com/Dprinces/Testrack" },
-  { title: "SalonConnect · open-source contribution", year: "2024", tech: "React, TypeScript, Redux", href: "https://github.com/Dprinces/SalConFrontend" },
   { title: "Car Registry API", year: "2025", tech: "Node.js", href: "https://github.com/Dprinces/carregistry" },
   { title: "Dynamic Dashboard", year: "2024", tech: "React", href: "https://dynamic-dashboard-nine.vercel.app" },
-  { title: "Login Form · Redux Toolkit", year: "2024", tech: "React, Redux", href: "https://github.com/Dprinces/simple_loginForm" },
   { title: "Banking Landing Page", year: "2024", tech: "HTML, CSS", href: "https://banking-website-landing-page-puce.vercel.app" },
   { title: "Zidio Chat App", year: "2024", tech: "JavaScript", href: "https://github.com/Dprinces/zidio_chat_application" },
 ] as const;
@@ -243,7 +228,7 @@ export const experience: TimelineItem[] = [
     period: "Mar 2026 — Present",
     title: "Application Developer (Contract)",
     org: "Sage Grey Technologies Limited · Lagos (Remote)",
-    body: "Building the cross-platform mobile app for SplitMulti, serving both vendor and customer marketplaces. Features I launched streamlined vendor sales and customer purchasing, helping grow users from 20 to 80 — a 300% increase.",
+    body: "Building the cross-platform mobile app for SplitMulti, serving 25 vendors and 850+ products across vendor and customer marketplaces. Features I launched streamlined vendor sales and customer purchasing, helping grow users from 20 to 90 — a 350% increase.",
     tags: ["React Native", "Expo", "TypeScript"],
   },
   {
@@ -257,7 +242,7 @@ export const experience: TimelineItem[] = [
     period: "Jun 2025 — Sep 2026",
     title: "Backend Developer",
     org: "Redot Global Services Limited · Lagos",
-    body: "Built the Flour Mills of Nigeria Tuckshop Portal with Moniepoint online payments and Moniebook “Pay with POS”. Developed and maintained the backend for Maxystuff, and managed integrations with Zoho and other ERP systems.",
+    body: "Built the Flour Mills of Nigeria Tuckshop Portal — 650 staff, ~25 orders a day, ~₦3.56M a month — with Moniepoint online payments and Moniebook “Pay with POS”. Developed and maintained the backend for Maxystuff, and managed integrations with Zoho and other ERP systems.",
     tags: ["PostgreSQL", "Moniepoint", "Zoho", "REST APIs"],
   },
   {
@@ -291,7 +276,7 @@ export const experience: TimelineItem[] = [
     period: "Mar — Sep 2023",
     title: "Team Lead",
     org: "Ekiti State Digital Skilling Academy (EDSA)",
-    body: "Led projects and programmes organised by EDSA, supervised capstone projects, and coordinated visits to private and government schools.",
+    body: "Led a team of 12 on EDSA projects and programmes, supervised capstone projects, and coordinated capstone visits to 2 schools in Ado-Ekiti.",
     tags: ["Leadership", "Mentoring"],
   },
   {
@@ -305,10 +290,10 @@ export const experience: TimelineItem[] = [
 
 export const education: TimelineItem[] = [
   {
-    period: "2021 — 2026",
+    period: "2021 — 2025",
     title: "B.Sc (Ed.) Computer Science",
     org: "Ekiti State University, Ado-Ekiti",
-    body: "GPA 3.9 / 5.0. Award of Excellence in Academics (Sandwich Students' Welfare Association, 2023). Final-year project: an e-assessment system for practical programming tests.",
+    body: "Degree conferred Feb 2026. GPA 3.9 / 5.0. Award of Excellence in Academics (Sandwich Students' Welfare Association, 2023). Served as Student Union President 2025. Final-year project: an e-assessment system for practical programming tests.",
     image: "/images/graduation.jpg",
   },
 ];

@@ -5,7 +5,7 @@ import { SectionHeader } from "./SectionHeader";
 
 const languages = [
   { name: "English", level: 4 },
-  { name: "Yoruba", level: 3 },
+  { name: "Yoruba", level: 4 },
 ];
 
 export function About() {
@@ -25,15 +25,31 @@ export function About() {
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
         <Reveal className="relative">
           <div className="sticky top-28">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-line">
-              <Image
-                src="/images/hero.jpg"
-                alt="Anthony Ogunleye in a red hoodie in front of a graffiti wall"
-                fill
-                sizes="(max-width: 1024px) 90vw, 420px"
-                className="object-cover grayscale transition-all duration-700 hover:grayscale-0"
-              />
-            </div>
+            <figure className="group relative">
+              <div className="absolute -inset-3 rounded-[2.25rem] bg-gradient-to-br from-ember/35 via-ember/5 to-transparent blur-2xl" />
+              <div className="relative overflow-hidden rounded-[1.75rem] border border-line-2 bg-ink-3 p-2">
+                <div className="relative aspect-square overflow-hidden rounded-[1.35rem]">
+                  <Image
+                    src="/images/about-laptop.jpg"
+                    alt="Anthony Ogunleye smiling while working on a laptop"
+                    fill
+                    sizes="(max-width: 1024px) 90vw, 440px"
+                    className="object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-[1.04]"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-ink/85 to-transparent" />
+                  <figcaption className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-3">
+                    <span>
+                      <span className="label block !text-paper/70">Based in</span>
+                      <span className="mt-1 block text-sm font-medium">{profile.location}</span>
+                    </span>
+                    <span className="flex items-center gap-2 rounded-full border border-paper/15 bg-ink/60 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-paper/80 backdrop-blur">
+                      <span className="size-1.5 animate-pulse-dot rounded-full bg-emerald-400" />
+                      Open to work
+                    </span>
+                  </figcaption>
+                </div>
+              </div>
+            </figure>
             <div className="mt-6 grid grid-cols-2 gap-4">
               {languages.map((l) => (
                 <div key={l.name} className="rounded-2xl border border-line p-4">
