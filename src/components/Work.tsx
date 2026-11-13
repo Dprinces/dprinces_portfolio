@@ -18,23 +18,14 @@ const snippets: Record<string, string[]> = {
     "$ orders --monthly      5,000+",
   ],
   salonconnect: [
-    "$ npm run dev",
-    "store   ▸ redux toolkit · 6 slices",
+    "$ git log --oneline --author=Dprinces",
+    "feat: wire all screens into router",
+    "feat: payment card updates",
+    "fix: merge booking flow into App.tsx",
+    "",
+    "store   ▸ redux toolkit",
     "forms   ▸ formik + yup ✓",
     "ui      ▸ material ui + tailwind",
-    "",
-    "GET /salons?near=me        200",
-    "POST /bookings             201",
-  ],
-  eacc: [
-    "$ uvicorn app.main:app --reload",
-    "INFO  EACC API ready on :8000",
-    "",
-    "POST /auth/register        201",
-    "POST /bookings/passenger   201",
-    "POST /bookings/cargo       201",
-    "GET  /pricing/quote?kg=40  200",
-    "  → distance + weight + airport fee",
   ],
   "service-booking": [
     "$ npx expo start",
@@ -45,18 +36,27 @@ const snippets: Record<string, string[]> = {
     "AsyncStorage       3 bookings saved",
     "› Press a │ open Android",
   ],
-  "virtual-assistant": [
-    "$ npm run dev",
-    "server  ▸ express on :5000",
-    "db      ▸ mongodb connected",
-    "auth    ▸ jwt + refresh tokens",
-    "",
-    "> summarise today's tasks",
-    "assistant: You have 4 open tasks…",
-  ],
 };
 
+// Portrait app screenshots (already include a device bezel) — shown whole, not cropped into a browser.
+function PhoneFrame({ project, priority }: { project: Project; priority?: boolean }) {
+  return (
+    <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-line-2 bg-ink shadow-[0_30px_80px_-20px_rgb(0_0_0/0.7)]">
+      <div className="absolute left-1/2 top-1/2 size-2/3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-ember/15 blur-3xl" />
+      <Image
+        src={project.image!}
+        alt={`Screenshot of the ${project.title} on a phone`}
+        fill
+        priority={priority}
+        sizes="(max-width: 1024px) 50vw, 340px"
+        className="object-contain py-5 transition-transform duration-[1.2s] ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-[1.04]"
+      />
+    </div>
+  );
+}
+
 function BrowserFrame({ project, priority }: { project: Project; priority?: boolean }) {
+  if (project.image && project.device === "phone") return <PhoneFrame project={project} priority={priority} />;
   const host = project.live
     ? new URL(project.live).host
     : project.repo
